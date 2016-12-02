@@ -5,8 +5,8 @@
 1. The "Remove Useless Attribute" may not work due to the potential underflow in the operator. Need to write R/Python script for 
 such situation.
 
-2. Both "Execute R" and "Execute Python" only accept dataset as input, which will turns out to be data table/pandas.Dataframe 
-inside the script. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
+2. Both "Execute R" and "Execute Python" only accept dataset as input, which will turns out to be 
+data table in R or pandas.Dataframe inside the script. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
 
 ## Regression Model in RapidMiner
 
