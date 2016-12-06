@@ -5,12 +5,12 @@
 1. The "Remove Useless Attribute" may not work due to the potential underflow in the operator. Need to write R/Python script for 
 such situation.
 
-2. Both "Execute R" and "Execute Python" only accept dataset as input, which will turns out to be 
+2. Both "Execute R" and "Execute Python" cannot accept RapidMiner model/PerformanceVector etc. as input, which will turns out to be 
 data table in R or pandas.Dataframe inside the script. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
 
 ## Regression Model in RapidMiner
 
-1. Due to the restriction in RapidMiner, most regression models are included in General Linear Model.
+1. Due to the restriction in RapidMiner, most regression models can be found in General Linear Model.
 
 2. Be careful while using macros. Make sure it's defined before the related process start running.
 
