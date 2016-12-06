@@ -16,10 +16,14 @@ data table in R or pandas.Dataframe inside the script. For executing model, perf
 
 ## Two-class model in RapidMiner
 
-1. Remember to convert the label type using "Numerical to Binomial"
+1. Remember to convert the label type using "Numerical to Binomial".
 
 ## Multi-class model in RapidMiner
 
+1. For Ordinal Regression Model in rapidMiner(unable to find relevant operators), tried to use pure R script to train and test the model. 
+Check [here](http://community.rapidminer.com/t5/RapidMiner-Studio/Is-is-possible-to-see-the-output-from-an-R-model-in-Rapidminer/td-p/24472) for samples using R to train and apply models in RapidMiner, and check [here](http://www.uni-kiel.de/psychologie/rexrepos/posts/regressionOrdinal.html) for ordinal regression in R.
+
+2. There's an operator called [Polynominal by Binominal Classification](http://docs.rapidminer.com/studio/operators/modeling/predictive/ensembles/polynomial_by_binomial_classification.html) maybe useful for multi-class models. Note that it cannot be searched out in the operator searching bar. An application related to multi-class model can be seen [here](http://community.rapidminer.com/t5/RapidMiner-Studio/Multi-Class-Labels/td-p/26572).
 
 ## Data Storage/Model Application
 
