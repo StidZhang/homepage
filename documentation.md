@@ -1,3 +1,24 @@
+# Algorithm Performance
+
+## Regression:
+
+
+Algorithm | Poisson Regression | Neural Net | Gradient Boosted Tree | Linear Regression
+ --- | --- | --- | --- | ---
+root mean squared error | 29.635 | 23.604 | 25.806 | 31.452
+absolute error | 22.889 | 18.072 | 20.746 | 26.430
+relative error | 0.547 | 0.384 | 0.471 | 0.593
+correlation | 0.807 | 0.875 | 0.869 | 0.822
+
+## Binary:
+Algorithm | Boosted Tree | Logistic Regression | Random Forest | Neural Network
+ --- | --- | --- | --- | ---
+accuracy | 0.910 | 0.910 | 0.900 | 0.910
+precision | 0.864 | 0.944 | 0.941 | 0.900
+recall | 0.760 | 0.680 | 0.640 | 0.720
+F measurement | 0.809 | 0.791 | 0.762 | 0.800
+
+
 # Note on RapidMiner
 
 ## Data Preparation
