@@ -59,3 +59,8 @@ You need to type them manually if further operation is needed on these attribute
 2. Connection between RapidMiner and MongoDB could be done by NoSQL Extension, but using Python(pymongo)/R(RMongo) is recommended due
 to the restriction on such operators. Also note that currently RMongo doesn't seem to support cloud mongoDB database.
 
+
+## Scheduled RapidMiner Server Process
+
+Inside RapidMiner Studio(connected to Server), choose the process need to be scheduled, then select Process->Schedule Process on Server, and choose Cron Schedule for detailed schedules. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-studio.html) 
+
