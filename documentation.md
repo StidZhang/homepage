@@ -22,8 +22,8 @@ F measurement | 0.809 | 0.791 | 0.762 | 0.800
 Algorithm | Neural Net | Logistic Regression | Ordinal Regression(logistic)
  --- | --- | --- | ---
 accuracy | 0.880 | 0.890 | 0.910
-root mean squared error | 0.287 | 0.311 | N/A
-
+weighted mean recall | 0.740 | 0.756 | 0.807
+weighted mean precision | 0.812 | 0.891 | 0.905
 
 # Note on RapidMiner
 
