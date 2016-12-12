@@ -16,7 +16,6 @@ Algorithm | Boosted Tree | Logistic Regression | Random Forest | Neural Network
 accuracy | 0.910 | 0.910 | 0.900 | 0.910
 precision | 0.864 | 0.944 | 0.941 | 0.900
 recall | 0.760 | 0.680 | 0.640 | 0.720
-F measurement | 0.809 | 0.791 | 0.762 | 0.800
 
 ## Multi-class:
 Algorithm | Neural Net | Logistic Regression | Ordinal Regression(logistic)
