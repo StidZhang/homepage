@@ -64,3 +64,9 @@ to the restriction on such operators. Also note that currently RMongo doesn't se
 
 Inside RapidMiner Studio(connected to Server), choose the process need to be scheduled, then select Process->Schedule Process on Server, and choose Cron Schedule for detailed schedules. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-studio.html) 
 Besides having process running at a scheduled time period, it can also be trigger by file changes or incoming mails. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-server.html)
+
+
+## Apply R Model
+
+To import and export an R Model, [save](https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html) and [load](https://stat.ethz.ch/R-manual/R-devel/library/base/html/load.html) are the functions do the job. Note that a "rda" file extension is often used for R objects.
+However, due to the restriction and implementation of RapidMiner Server, so far I cannot find a way to save/load an R Model inside RapidMiner Server repo properly. Therefore, for cloud service purposes, a potential solution is an API for [Amazon S3 and R]("https://github.com/cloudyr/aws.s3") in order to save the R model, or save it directly on somewhere on Cloud(Github, Dropbox, etc.) as well as loading.
