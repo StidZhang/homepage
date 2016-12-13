@@ -27,10 +27,10 @@ Weighted mean precision | 0.812 | 0.891 | 0.905
 
 ## Data Preparation
 
-1. The "Remove Useless Attribute" may not work due to the potential underflow in the inplementation of the operator. Need to write R/Python script for 
+1. The [Remove Useless Attribute](http://docs.rapidminer.com/studio/operators/blending/attributes/selection/remove_useless_attributes.html) may not work due to the potential underflow in the inplementation of the operator. Need to write R/Python script for 
 such situation.
 
-2. Both "Execute R" and "Execute Python" cannot accept RapidMiner model/PerformanceVector etc. as input, which will turns out to be 
+2. Both [Execute R](http://docs.rapidminer.com/studio/operators/utility/scripting/execute_r.html) and [Execute Python](http://docs.rapidminer.com/studio/operators/utility/scripting/execute_python.html) cannot accept RapidMiner model/PerformanceVector etc. as input, which will turns out to be 
 data table in R or pandas.Dataframe inside the script, so an operator like "Performace to Data" is required if a script is needed.. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
 
 ## Regression Model in RapidMiner
