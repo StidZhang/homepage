@@ -1,6 +1,6 @@
 # RapidMiner Note
 
-## Algorithm Performance(all default configs)
+## Algorithm Performance for Predictive Maintenance Project(Default Configuration)
 
 ### Regression:
 
