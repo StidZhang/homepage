@@ -70,4 +70,5 @@ Besides having process running at a scheduled time period, it can also be trigge
 
 To import and export an R Model, [save](https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html) and [load](https://stat.ethz.ch/R-manual/R-devel/library/base/html/load.html) are the functions do the job. Note that a "rda" file extension is often used for R objects.
 
-However, due to the restriction and implementation of RapidMiner Server, so far I cannot find a way to save/load an R Model inside RapidMiner Server repo properly. Therefore, for cloud service purposes, a potential solution is API between [Amazon S3 and R]("https://github.com/cloudyr/aws.s3"), or save the .rda file directly on somewhere on Cloud(Github, Dropbox, etc.) as well as loading.
+However, due to the restriction and implementation of RapidMiner Server, so far I cannot find a way to save/load an R Model inside RapidMiner Server repo properly. Therefore, for cloud service purposes, a potential solution is 
+[API between Amazon S3 and R](https://github.com/cloudyr/aws.s3), or save the .rda file directly on somewhere on Cloud(Github, Dropbox, etc.) as well as loading.
