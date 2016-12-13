@@ -1,4 +1,4 @@
-# Algorithm Performance
+# Algorithm Performance(all default configs)
 
 ## Regression:
 
@@ -63,4 +63,4 @@ to the restriction on such operators. Also note that currently RMongo doesn't se
 ## Scheduled RapidMiner Server Process
 
 Inside RapidMiner Studio(connected to Server), choose the process need to be scheduled, then select Process->Schedule Process on Server, and choose Cron Schedule for detailed schedules. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-studio.html) 
-
+Besides having process running at a scheduled time period, it can also be trigger by file changes or incoming mails. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-server.html)
