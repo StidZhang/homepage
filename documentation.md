@@ -2,33 +2,32 @@
 
 ## Regression:
 
-
 Algorithm | Poisson Regression | Neural Net | Gradient Boosted Tree | Linear Regression
  --- | --- | --- | --- | ---
-root mean squared error | 29.635 | 31.398 | 25.806 | 31.452
-absolute error | 22.889 | 26.313 | 20.746 | 26.430
-relative error | 0.547 | 0.725 | 0.471 | 0.593
-correlation | 0.807 | 0.876 | 0.869 | 0.822
+Root mean squared error | 29.635 | 31.398 | 25.806 | 31.452
+Absolute error | 22.889 | 26.313 | 20.746 | 26.430
+Relative error | 0.547 | 0.725 | 0.471 | 0.593
+Correlation | 0.807 | 0.876 | 0.869 | 0.822
 
 ## Binary:
 Algorithm | Boosted Tree | Logistic Regression | Random Forest | Neural Network
  --- | --- | --- | --- | ---
-accuracy | 0.910 | 0.910 | 0.900 | 0.910
-precision | 0.864 | 0.944 | 0.941 | 0.900
-recall | 0.760 | 0.680 | 0.640 | 0.720
+Accuracy | 0.910 | 0.910 | 0.900 | 0.910
+Precision | 0.864 | 0.944 | 0.941 | 0.900
+Recall | 0.760 | 0.680 | 0.640 | 0.720
 
 ## Multi-class:
 Algorithm | Neural Net | Logistic Regression | Ordinal Regression(logistic)
  --- | --- | --- | ---
-accuracy | 0.880 | 0.890 | 0.910
-weighted mean recall | 0.740 | 0.756 | 0.807
-weighted mean precision | 0.812 | 0.891 | 0.905
+Accuracy | 0.880 | 0.890 | 0.910
+Weighted mean recall | 0.740 | 0.756 | 0.807
+Weighted mean precision | 0.812 | 0.891 | 0.905
 
-# Note on RapidMiner
+# Note on RapidMiner Studio
 
 ## Data Preparation
 
-1. The "Remove Useless Attribute" may not work due to the potential underflow in the operator. Need to write R/Python script for 
+1. The "Remove Useless Attribute" may not work due to the potential underflow in the inplementation of the operator. Need to write R/Python script for 
 such situation.
 
 2. Both "Execute R" and "Execute Python" cannot accept RapidMiner model/PerformanceVector etc. as input, which will turns out to be 
@@ -36,7 +35,7 @@ data table in R or pandas.Dataframe inside the script, so an operator like "Perf
 
 ## Regression Model in RapidMiner
 
-1. Due to the restriction in RapidMiner, most regression models can be found in General Linear Model.
+1. The design in RapidMiner makes most regression models can be found in General Linear Model.
 
 2. Be careful while using macros. Make sure it's defined before the related process start running.
 
@@ -54,21 +53,35 @@ Check [here](http://community.rapidminer.com/t5/RapidMiner-Studio/Is-is-possible
 ## Data Storage/Model Application
 
 1. The result after applied a model may be not visible in the default attribute selection list(e.g.confidence(False)).
-You need to type them manually if further operation is needed on these attributees.
+You need to specify them manually if further operation is needed on these attributees.
 
 2. Connection between RapidMiner and MongoDB could be done by NoSQL Extension, but using Python(pymongo)/R(RMongo) is recommended due
-to the restriction on such operators. Also note that currently RMongo doesn't seem to support cloud mongoDB database.
-
+to the restriction on such operators. Also note that currently RMongo doesn't seem to support cloud mongoDB database. Note that for NoSQL extension, a local meteor mongodb has the name "meteor" for the database and username/password is not required. 
 
 ## Scheduled RapidMiner Server Process
 
 Inside RapidMiner Studio(connected to Server), choose the process need to be scheduled, then select Process->Schedule Process on Server, and choose Cron Schedule for detailed schedules. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-studio.html) 
+
 Besides having process running at a scheduled time period, it can also be trigger by file changes or incoming mails. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-server.html)
 
 
 ## Apply R Model
 
-To import and export an R Model, [save](https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html) and [load](https://stat.ethz.ch/R-manual/R-devel/library/base/html/load.html) are the functions do the job. Note that a "rda" file extension is often used for R objects.
+To import and export an R Model, [save](https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html) and [load](https://stat.ethz.ch/R-manual/R-devel/library/base/html/load.html) are the functions do the job. Note that an "rda" file extension is often used for R objects. Example code:
 
-However, due to the restriction and implementation of RapidMiner Server, so far I cannot find a way to save/load an R Model inside RapidMiner Server repo properly. Therefore, for cloud service purposes, a potential solution is 
+```
+# Training and Saving
+...
+library(MASS)
+model <- polr(as.factor(label2)~.,method="logistic",data=dataset)
+save(model, file="/user/model/ordinal_regression.rda")
+-----------
+# Loading
+...
+load("/user/model/ordinal_regression.rda")
+prediction <- predict(model, data)
+...
+```
+
+However, due to the restriction and implementation of RapidMiner Server, so far I cannot find a proper way to save/load an R Model inside RapidMiner Server repo. Therefore, for cloud service purposes with R models, a potential solution is 
 [API between Amazon S3 and R](https://github.com/cloudyr/aws.s3), or save the .rda file directly on somewhere on Cloud(Github, Dropbox, etc.) as well as loading.
