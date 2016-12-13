@@ -32,7 +32,7 @@ weighted mean precision | 0.812 | 0.891 | 0.905
 such situation.
 
 2. Both "Execute R" and "Execute Python" cannot accept RapidMiner model/PerformanceVector etc. as input, which will turns out to be 
-data table in R or pandas.Dataframe inside the script. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
+data table in R or pandas.Dataframe inside the script, so an operator like "Performace to Data" is required if a script is needed.. For executing model, performaceVector or any other thing, the "Execute Script" use Groovy scripts/Java codes.
 
 ## Regression Model in RapidMiner
 
