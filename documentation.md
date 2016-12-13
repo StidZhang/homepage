@@ -4,7 +4,7 @@
 
 ### Regression:
 
-Algorithm | Poisson Regression | Neural Net | Gradient Boosted Tree | Linear Regression
+Algorithm | Poisson Regression | Neural Net | *Gradient Boosted Tree* | Linear Regression
  --- | --- | --- | --- | ---
 Root mean squared error | 29.635 | 31.398 | 25.806 | 31.452
 Absolute error | 22.889 | 26.313 | 20.746 | 26.430
@@ -12,14 +12,14 @@ Relative error | 0.547 | 0.725 | 0.471 | 0.593
 Correlation | 0.807 | 0.876 | 0.869 | 0.822
 
 ### Binary:
-Algorithm | Boosted Tree | Logistic Regression | Random Forest | Neural Network
+Algorithm | *Boosted Tree* | Logistic Regression | Random Forest | Neural Network
  --- | --- | --- | --- | ---
 Accuracy | 0.910 | 0.910 | 0.900 | 0.910
 Precision | 0.864 | 0.944 | 0.941 | 0.900
 Recall | 0.760 | 0.680 | 0.640 | 0.720
 
 ### Multi-class:
-Algorithm | Neural Net | Logistic Regression | Ordinal Regression(logistic)
+Algorithm | Neural Net | *Logistic Regression* | Ordinal Regression(logistic)
  --- | --- | --- | ---
 Accuracy | 0.880 | 0.890 | 0.910
 Weighted mean recall | 0.740 | 0.756 | 0.807
@@ -37,7 +37,7 @@ data table in R or pandas.Dataframe inside the script, so an operator like "Perf
 
 ### Regression Model in RapidMiner
 
-1. The design in RapidMiner makes most regression models can be found in General Linear Model.
+1. The design in RapidMiner makes most regression models can be found in [General Linearized Model](http://docs.rapidminer.com/studio/operators/modeling/predictive/functions/generalized_linear_model.html).
 
 2. Be careful while using macros. Make sure it's defined before the related process start running.
 
