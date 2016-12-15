@@ -60,6 +60,21 @@ You need to specify them manually if further operation is needed on these attrib
 2. Connection between RapidMiner and MongoDB could be done by NoSQL Extension, but using [PyMongo](https://api.mongodb.com/python/current/)/[RMongo](https://github.com/tc/RMongo) is recommended due
 to the restriction on such operators. Also note that currently RMongo doesn't seem to support cloud mongoDB database. Note that for NoSQL extension, a local meteor mongodb has the name "meteor" for the database and username/password is not required. 
 
+PyMongo example:
+```Python
+# local meteor MongoDB
+client = MongoClient("localhost", 3001)
+db = client['meteor']
+devices = db['predictive'] # Get Collection
+devices.update({'device_id':"Avio200-200"},{"s1":13}, upsert=True)
+
+# Heroku MongoDB
+client = MongoClient("ds123456.mlab.com", 35786)
+db = client['database_name']
+db.authenticate("username","password")
+...
+```
+
 ## Scheduled RapidMiner Server Process
 
 Inside RapidMiner Studio(connected to Server), choose the process need to be scheduled, then select Process->Schedule Process on Server, and choose Cron Schedule for detailed schedules. [Source](http://docs.rapidminer.com/server/how-to/schedule-a-process/schedule-from-studio.html) 
@@ -71,7 +86,7 @@ Besides having process running at a scheduled time period, it can also be trigge
 
 To import and export an R Model, [save](https://stat.ethz.ch/R-manual/R-devel/library/base/html/save.html) and [load](https://stat.ethz.ch/R-manual/R-devel/library/base/html/load.html) are the functions do the job. Note that an "rda" file extension is often used for R objects. Example code:
 
-```
+```R
 # Training and Saving
 ...
 library(MASS)
