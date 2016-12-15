@@ -57,7 +57,7 @@ Check [here](http://community.rapidminer.com/t5/RapidMiner-Studio/Is-is-possible
 1. The result after applied a model may be not visible in the default attribute selection list(e.g.confidence(False)).
 You need to specify them manually if further operation is needed on these attributees.
 
-2. Connection between RapidMiner and MongoDB could be done by NoSQL Extension, but using Python(pymongo)/R(RMongo) is recommended due
+2. Connection between RapidMiner and MongoDB could be done by NoSQL Extension, but using [PyMongo](https://api.mongodb.com/python/current/)/[RMongo](https://github.com/tc/RMongo) is recommended due
 to the restriction on such operators. Also note that currently RMongo doesn't seem to support cloud mongoDB database. Note that for NoSQL extension, a local meteor mongodb has the name "meteor" for the database and username/password is not required. 
 
 ## Scheduled RapidMiner Server Process
