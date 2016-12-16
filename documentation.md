@@ -11,6 +11,8 @@ Absolute error | 22.889 | 26.313 | 20.746 | 26.430
 Relative error | 0.547 | 0.725 | 0.471 | 0.593
 Correlation | 0.807 | 0.876 | 0.869 | 0.822
 
+Selected Gradient Boosted Tree for the smallest error.
+
 ### Binary:
 Algorithm | *Boosted Tree* | Logistic Regression | Random Forest | Neural Network
  --- | --- | --- | --- | ---
@@ -18,12 +20,25 @@ Accuracy | 0.910 | 0.910 | 0.900 | 0.910
 Precision | 0.864 | 0.944 | 0.941 | 0.900
 Recall | 0.760 | 0.680 | 0.640 | 0.720
 
+Selected Boosted Tree for the overall higher accuracy and precision.
+
 ### Multi-class:
-Algorithm | Neural Net | *Logistic Regression* | Ordinal Regression(logistic)
+Algorithm | Neural Network | *Logistic Regression* | Ordinal Regression(logistic, R)
  --- | --- | --- | ---
 Accuracy | 0.880 | 0.890 | 0.910
-Weighted mean recall | 0.740 | 0.756 | 0.807
 Weighted mean precision | 0.812 | 0.891 | 0.905
+Weighted mean recall | 0.740 | 0.756 | 0.807
+
+Selected Logistic Regression with higher accuracy compared to Neural Network.
+
+Note: 
+
+accuracy = (Total Correct Classifications)/(Total number of examples)
+
+precision = (True Positives)/(Total Predicted Positives), weighted mean precision is calculated by taking the average of precision of every class
+
+recall = (True Positive)/(Total Positives), weighted mean recall is calculated by taking the average of recall of every class
+
 
 ## Note about model training
 
