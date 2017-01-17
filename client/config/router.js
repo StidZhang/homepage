@@ -8,7 +8,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/home', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "home"});
-        DocHead.setTitle('Homepage | Stid Zhang');
+        DocHead.setTitle('Stid | Homepage');
     }
 
 });
@@ -17,7 +17,7 @@ FlowRouter.route('/contact', {
     name: "Contact Infomation",
     action: function() {
         BlazeLayout.render("mainLayout", {content: "contact"});
-        DocHead.setTitle('Contact | Stid Zhang');
+        DocHead.setTitle('Stid | Contact');
     }
 });
 
@@ -25,6 +25,6 @@ FlowRouter.route('/project', {
     name: "Project Detail",
     action: function() {
         BlazeLayout.render("mainLayout", {content: "project"});
-        DocHead.setTitle('Project | Stid Zhang');
+        DocHead.setTitle('Stid | Project');
     }
 });
