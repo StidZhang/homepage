@@ -28,3 +28,4 @@ shell-server
 kadira:flow-router
 kadira:blaze-layout
 zimme:active-route
+kadira:dochead
