@@ -1,14 +1,14 @@
 
 FlowRouter.route('/', {
     action: function() {
-        FlowRouter.go('/home');
+        FlowRouter.go('/about');
     }
 });
 
-FlowRouter.route('/home', {
+FlowRouter.route('/about', {
     action: function() {
-        BlazeLayout.render("mainLayout", {content: "home"});
-        DocHead.setTitle('Stid | Homepage');
+        BlazeLayout.render("mainLayout", {content: "about"});
+        DocHead.setTitle('Stid | About');
     }
 
 })
@@ -19,5 +19,3 @@ FlowRouter.route('/project', {
         DocHead.setTitle('Stid | Project');
     }
 });
-
-FlowRouter.route('/homepage.pdf')
