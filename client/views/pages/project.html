@@ -1,17 +1,50 @@
 <template name="project">
 
-    {{> pageHeading title='Project' }}
+    {{> pageHeading title='My Projects' }}
 
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="text-center m-t-lg">
                     <h1>
-                        Simple example of second view
+                        <a href="./statproject.pdf" target="_blank">California Precipitation Analysis</a>
                     </h1>
-                    <small>Writen in pageTwo.html file.</small>
+                    <br>
+                    <div class="row">
+                        <img src="/analysis.png" height="65%" width="65%">
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="text-center m-t-lg">
+                    <h1>
+                        <a href="https://github.com/StidZhang/Watopoly">Watopoly</a>
+                    </h1>
+                    <br>
+                    <div class="row">
+                        <img src="/watopoly.png" height="65%" width="65%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 text-center">
+              <br>
+                <p class="lead">
+                    A linear regression analysis for annual average precipitation in California.
+                </p>
+            </div>
+            <div class="col-lg-6 text-center">
+              <br>
+                <p class="lead">
+                    A C++ comand line monopoly game with UWaterloo map.
+                </p>
+            </div>
+        </div>
+        <div class="row text-center">
+          <br>
+
+          <h1><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>MORE PROJECTS COMING SOON<i class="fa fa-cog fa-spin fa-2x fa-fw"></i></h1>
         </div>
     </div>
 </template>
