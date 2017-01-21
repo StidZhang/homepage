@@ -1,3 +1,3 @@
 # Personal Homepage
-Live at [here](homepage.stidzhang.me).
+Live at http://homepage.stidzhang.me.
 Still under construction.
