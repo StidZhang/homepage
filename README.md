@@ -1,1 +1,3 @@
-Portfolio homepage. Under construction.
+# Personal Homepage
+Live at http://homepage.stidzhang.me.
+Still under construction.
