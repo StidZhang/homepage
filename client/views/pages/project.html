@@ -1,44 +1,83 @@
 <template name="project">
 
-    {{> pageHeading title='My Projects' }}
+  {{> pageHeading title='My Statistics Projects' }}
 
-    <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="text-center m-t-lg">
-                    <h1>
-                        <a href="./statproject.pdf" target="_blank">California Precipitation Analysis</a>
-                    </h1>
-                    <br>
-                    <div class="row">
-                        <img src="/analysis.png" height="65%" width="65%">
-                    </div>
-                    <br>
-                    <p class="lead">
-                        A linear regression analysis for annual average precipitation in California.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="text-center m-t-lg">
-                    <h1>
-                        <a href="https://github.com/StidZhang/Watopoly">Watopoly</a>
-                    </h1>
-                    <br>
-                    <div class="row">
-                        <img src="/watopoly.png" height="65%" width="65%">
-                    </div>
-                    <br>
-                    <p class="lead">
-                        A C++ comand line monopoly game with UWaterloo map.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="text-center m-t-lg">
+          <h1>
+            STAT 440: Computational Inference<br>
+            <a href="./stat440.pdf" target="_blank">
+              Calibrating and Forecasting Financial Portfolios
+            </a>
+          </h1>
           <br>
-          <h2><i class="fa fa-cog fa-spin fa-1x fa-fw"></i>MORE PROJECTS COMING SOON<i class="fa fa-cog fa-spin fa-1x fa-fw"></i></h2>
+          <div class="row">
+            <img src="/stat440.jpg" height="65%" width="65%">
+          </div>
           <br>
+          <p class="lead">
+            An investing strategy using GARCH(1,1) model and the rolling method to
+            forecast volatility is tested on real stocks and its performance is
+            compared against the return of the S&P 500.
+          </p>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center m-t-lg">
+          <h1>
+            STAT 331: Applied Linear Models<br>
+            <a href="./stat331.pdf" target="_blank">
+              California Precipitation Analysis
+            </a>
+          </h1>
+          <br>
+          <div class="row">
+            <img src="/stat331.png" height="65%" width="65%">
+          </div>
+          <br>
+          <p class="lead">
+            A linear regression analysis for annual average precipitation in California.
+          </p>
+        </div>
+      </div>
     </div>
+    <!-- <div class="row">
+      <div class="col-lg-6">
+        <div class="text-center m-t-lg">
+          <h1>
+            STAT 331: Applied Linear Models<br>
+            <a href="./stat331.pdf" target="_blank">
+              California Precipitation Analysis
+            </a>
+          </h1>
+          <br>
+          <div class="row">
+            <img src="/stat331.png" height="65%" width="65%">
+          </div>
+          <br>
+          <p class="lead">
+            A linear regression analysis for annual average precipitation in California.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center m-t-lg">
+          <h1>
+            CS 246: Object-Oriented Software Development<br>
+            <a href="https://github.com/StidZhang/Watopoly">Watopoly</a>
+          </h1>
+          <br>
+          <div class="row">
+            <img src="/watopoly.png" height="65%" width="65%">
+          </div>
+          <br>
+          <p class="lead">
+            A C++ comand line monopoly game with UWaterloo map.
+          </p>
+        </div>
+      </div>
+    </div> -->
+  </div>
 </template>
